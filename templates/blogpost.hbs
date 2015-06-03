@@ -1,31 +1,32 @@
-{{!-- jd's movies handlebars
+{{#each timelines}}
+<div class="sidebar">
 
-<h1>Fav Movies</h1>
+  <div class="timestamp">
+    <span class="tstamp">
+    {{timestamp}}
+    </span>
 
-<ul>
-  {{#each movies}}
+    <span class="pstamp">
+    {{poststamp}}
+    </span>
+  </div>
 
-    {{#if release}}
+  <div class="icon">
+    <div class="iconitself">
+      <span class="iconitsef"><i class="fa {{icon}}"></i></span>
+    </div>
+  </div>
 
-      <li>{{title}} by {{director}} released on {{release}}</li>
-    
-      {{else}}
-    
-      <li>{{title}} by {{director}}</li>
-    
-    {{/if}}
+</div>
 
-  {{/each}}
-</ul> --}}
+<div class="post">
 
-  {{#each timelines}}
+  <div class="title">
+    <h1>{{title}}</h1>
+  </div>
 
-    <div class="timestamp"><span class="tstamp">{{timestamp}}</span></div>
-
-    <div class="icon"><span class="icon"><i class="fa {{icon}}"></i></span></div>
-
-    <div class="title"><h1>{{title}}</h1></div>
-
-    <p class = "postcontent">{{content}}</p>
+  <p class ="posttext">{{content}}</p>
+  
+</div>
 
   {{/each}}

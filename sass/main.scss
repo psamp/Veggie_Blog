@@ -1,0 +1,31 @@
+@import "vendor/css/bourbon/bourbon";
+@import "vendor/css/neat/neat";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
+
+$postoddbg: #6FC0EC;
+$postevenbg: #3A95C9;
+$posttext: #FFFFFF;
+$sidebarborder: #B1DCF7;
+$iconbg: #4BA5D8;
+$datecolor: #B7CBD7;
+
+@mixin bradius($br) {
+
+}
+
+body {
+  font-family: 'Roboto';
+  max-width:1200px;
+}
+
+.container {
+  max-width:960px;
+  margin:0 auto;
+  background-color: $postoddbg;
+}
+
+.blogpost {
+  float:right;
+  width:60%;
+  margin: 0;
+}
