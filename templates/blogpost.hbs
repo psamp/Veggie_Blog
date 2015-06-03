@@ -1,0 +1,31 @@
+{{!-- jd's movies handlebars
+
+<h1>Fav Movies</h1>
+
+<ul>
+  {{#each movies}}
+
+    {{#if release}}
+
+      <li>{{title}} by {{director}} released on {{release}}</li>
+    
+      {{else}}
+    
+      <li>{{title}} by {{director}}</li>
+    
+    {{/if}}
+
+  {{/each}}
+</ul> --}}
+
+  {{#each timelines}}
+
+    <div class="timestamp"><span class="tstamp">{{timestamp}}</span></div>
+
+    <div class="icon"><span class="icon"><i class="fa {{icon}}"></i></span></div>
+
+    <div class="title"><h1>{{title}}</h1></div>
+
+    <p class = "postcontent">{{content}}</p>
+
+  {{/each}}

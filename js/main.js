@@ -1,27 +1,62 @@
 console.log('This is cool!');
 
-// $('.container').html(template.example({
-//   value: 'Hello, World!!'
-// }));
+// JD'S MOVIES JS
 
-$.getJSON( "http://private-44f6d-timeline6.apiary-mock.com/timeline").done( function (blogData) {
+// $.getJSON('movies.json').done(function(data){
 
-    console.log(blogData);
+//   console.log('data', data);
+  
+//   data.movies = data.movies.map(function(movie){
 
-    blogData.timelines = blogData.timelines.forEach(function(posts) {
+//     if(movie.release) {
 
-      var title = posts.title;
+//       var date = moment(new Date(movie.release));
+
+//       movie.release = date.format('MMMM Do, \'YY');
+//     }
+  
+//   return movie;
+
+//   });
+
+//   $('.container').html(template.movies(data));
+
+// });
+
+$.getJSON( "http://private-44f6d-timeline6.apiary-mock.com/timeline").done(function (blogData) {
+
+  blogData = blogData.timelines.map(function(post) {
+
+    var title = post.title;
+
+    // post date + timeline
+
+    var date = moment(post.timestamp);
       
-      var timestamp = posts.timestamp;
+    var time = moment(post.timestamp);
 
-      var content = posts.content;
+    post.timestamp = date.format('M/D/YY');
+
+    var poststamp = time.format('HH:mm');
       
-      var icon = posts.icon;
+    var timestamp = post.timestamp;
+
+    // end postdate + timestamp
+
+    var content = post.content;
       
-      var data = timestamp + "\n" + title + "\n" + content + "\n" + icon;
+    var icon = post.icon;
       
-      console.log(data);
-    
+    var consoleLogData = timestamp + "\n" + poststamp + "\n" + title + "\n" + content + "\n" + icon;
+
+    console.log(consoleLogData);
+
+    return post;
+
     });
+
+  console.log(blogData);
+
+  $('.blogposts').html(template.blogpost(blogData));
 
 });
