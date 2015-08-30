@@ -1,32 +1,32 @@
 {{#each timelines}}
-<div class="sidebar">
 
-  <div class="timestamp">
-    <span class="tstamp">
-    {{timestamp}}
-    </span>
+<div class="blogpost">
 
-    <span class="pstamp">
-    {{poststamp}}
-    </span>
-  </div>
+  <div class="sidebar">
 
-  <div class="icon">
-    <div class="iconitself">
-      <span class="iconitsef"><i class="fa {{icon}}"></i></span>
+    <div class="timestamp">
+      <span class="tstamp">
+        {{timestamp}}
+      </span>
+
+      <span class="pstamp">
+        {{poststamp}}
+      </span>
+    </div>
+
+    <div class="icon">
+        <i class="fa {{icon}}"></i>
     </div>
   </div>
 
-</div>
+  <div class="post">
 
-<div class="post">
+    <div class="title">
+      <h1>{{title}}</h1>
+    </div>
 
-  <div class="title">
-    <h1>{{title}}</h1>
+    <p class ="posttext">{{content}}</p>
+
   </div>
-
-  <p class ="posttext">{{content}}</p>
-  
 </div>
-
   {{/each}}

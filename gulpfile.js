@@ -15,7 +15,7 @@ var notifyError = function() {
   return plumber({
     errorHandler: notify.onError('Error: <%= error.message %>')
   });
-}
+};
 
 
 //================================================

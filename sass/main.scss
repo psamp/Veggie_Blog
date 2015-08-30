@@ -7,6 +7,7 @@ $postevenbg: #3A95C9;
 $posttext: #FFFFFF;
 $sidebarborder: #B1DCF7;
 $iconbg: #4BA5D8;
+$iconcontainerbg: #A6DCFB;
 $datecolor: #B7CBD7;
 
 @mixin bradius($br) {
@@ -15,17 +16,53 @@ $datecolor: #B7CBD7;
 
 body {
   font-family: 'Roboto';
-  max-width:1200px;
 }
 
 .container {
-  max-width:960px;
   margin:0 auto;
-  background-color: $postoddbg;
+  max-width: 700px;
 }
 
 .blogpost {
-  float:right;
-  width:60%;
-  margin: 0;
+  position: relative;
+  padding:20px;
+  margin:40px;
+  max-width: 600px;
+
+  &:nth-child(odd) {
+    background-color: $postoddbg;
+  }
+
+  &:nth-child(even) {
+    background-color: $postevenbg;
+  }
+
+  .post {
+    color:white;
+  }
+
+  h1 {
+    border-bottom: 1px white solid;
+    padding-bottom: 15px;
+  }
+
+  .icon {
+    background-color: $iconcontainerbg;
+    height:50px;
+    width:50px;
+    text-align: center;
+    .fa {
+      margin-left: 0 auto;
+      margin-right:0 auto;
+      display: block;
+      float: right;
+      color:white;
+      background-color: $iconbg;
+    }
+  }
+}
+
+.sidebar {
+  position: absolute;
+  width:200px;
 }

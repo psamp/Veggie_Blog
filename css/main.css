@@ -8,15 +8,39 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: 'Roboto';
-  max-width: 1200px; }
+  font-family: 'Roboto'; }
 
 .container {
-  max-width: 960px;
   margin: 0 auto;
-  background-color: #6FC0EC; }
+  max-width: 700px; }
 
 .blogpost {
-  float: right;
-  width: 60%;
-  margin: 0; }
+  position: relative;
+  padding: 20px;
+  margin: 40px;
+  max-width: 600px; }
+  .blogpost:nth-child(odd) {
+    background-color: #6FC0EC; }
+  .blogpost:nth-child(even) {
+    background-color: #3A95C9; }
+  .blogpost .post {
+    color: white; }
+  .blogpost h1 {
+    border-bottom: 1px white solid;
+    padding-bottom: 15px; }
+  .blogpost .icon {
+    background-color: #A6DCFB;
+    height: 50px;
+    width: 50px;
+    text-align: center; }
+    .blogpost .icon .fa {
+      margin-left: 0 auto;
+      margin-right: 0 auto;
+      display: block;
+      float: right;
+      color: white;
+      background-color: #4BA5D8; }
+
+.sidebar {
+  position: absolute;
+  width: 200px; }
